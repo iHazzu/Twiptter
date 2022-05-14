@@ -4,6 +4,6 @@ Enter the following values to filter tweets. Please do not insert new lines.
 - Keywords (query):
 whitelist OR OG
 - Minimum amount of retweets:
-5
+50
 - Author's maximum number of followers:
-200000
+2000
