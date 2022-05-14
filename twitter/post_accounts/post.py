@@ -8,6 +8,8 @@ import re
 
 WP_URL = f"https://alphaleaks.com/wp-json/wp/v2/tweet"
 FONT = ImageFont.truetype("Optimus.otf", 40)
+
+# Connect to Twitter
 TWITTER_AUTH = tweepy.OAuth1UserHandler(
     env["API_KEY"],
     env["API_KEY_SECRET"],
@@ -17,14 +19,20 @@ TWITTER_AUTH = tweepy.OAuth1UserHandler(
 api = tweepy.API(TWITTER_AUTH)
 
 # Model image
-img = Image.open("model_accounts_post.png").convert('RGB')
+img = Image.open("model_accounts_post.png").convert("RGB")
 
 # Get accounts
-dw = ImageDraw.Draw(img, 'RGBA')
+dw = ImageDraw.Draw(img, "RGBA")
 y = 200
-mentions = ''
-params = {'per_page': 5}
+mentions = ""
+params = {
+    'per_page': 5,
+    'orderby': "modified",
+    'order': "desc"
+}
 posts = requests.get(WP_URL, params=params).json()
+
+# Write accounts
 for p in posts:
     match = re.search(r'Account ID: \[\d+', p['content']['rendered'])
     account_id = match.group()[13:]
