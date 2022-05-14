@@ -1,4 +1,4 @@
-Enter the following values to filter tweets. Please do not insert new lines.
+> Enter the following values to filter tweets. Please do not insert new lines.
 - Age in hours:
 3
 - Keywords (query):
