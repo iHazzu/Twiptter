@@ -7,7 +7,7 @@ import re
 
 
 WP_URL = f"https://alphaleaks.com/wp-json/wp/v2/tweet"
-FONT = ImageFont.truetype("Optimus.otf", 40)
+FONT = ImageFont.truetype("Roboto.ttf", 40)
 
 # Connect to Twitter
 TWITTER_AUTH = tweepy.OAuth1UserHandler(
