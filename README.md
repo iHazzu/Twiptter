@@ -31,3 +31,7 @@ Go to *Manage Files* from *Hazzu* and edit the file `Twippter/filters.txt`:
 ![manage_files](imgs/manage_files.png)
 ![edit_channel_ids](imgs/edit_filters.png)
  You can read [this guid](https://developer.twitter.com/en/docs/twitter-api/tweets/search/integrate/build-a-query) to learn how to build a query. After editing, save the file to apply the changes.
+
+### Post accounts on Twitter
+An additional module [post_accounts](twitter/post_accounts) was developed to post the found accounts on Twitter using a [template image](twitter/post_accounts/model_accounts_post.png).
+The text to be published with the image can be changed in the file [post_message](twitter/post_accounts/post_message.txt). Always when executed, the script will load the last accounts published on Wordpress and post on Twitter. This module can be executed similarly to the main program file. For that, I created a bash script to run it from a cron job: ![run_post_accounts](imgs/run_post_accounts.png)
