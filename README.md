@@ -1,7 +1,7 @@
 # Twiptter
 This is a Twitter bot that collects tweets according to certain filters and publishes then in a WordPress site.
 ### How it works?
-In the [main](main.py) file we create a loop through which the bot every 5 minutes will search for matched tweets and publish them on the WordPress site.
+In the [main](main.py) file we create a script that that should run every 10 minutes. This script will search for matched tweets and publish them on the WordPress site.
 
 The [twitter](twitter) module is responsible for connecting to the Twitter API and searching for tweets according to the filters specified in [filters](twitter/filters.txt).
 

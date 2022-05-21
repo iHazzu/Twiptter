@@ -8,8 +8,6 @@ import logging
 from datetime import datetime
 
 
-logging.basicConfig(filename="logs/post_logs.log", level=logging.ERROR)
-logging.debug(f'Posting accounts at {datetime.utcnow()}')
 mentions = ""
 try:
     WP_URL = f"https://alphaleaks.com/wp-json/wp/v2/tweet"
@@ -62,6 +60,7 @@ try:
     api.update_status_with_media(status=text, filename="whitelist.png", file=img_bytes)
 
 except Exception as error:
+    logging.basicConfig(filename="logs/post_logs.log", level=logging.ERROR)
     logging.exception(f" {datetime.utcnow()} - EXCEPTION: {error}\nACCOUNTS: {mentions}")
 
 
