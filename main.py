@@ -11,7 +11,7 @@ from wordpress import publish_tweet
 from time import sleep
 import logging
 
-logging.basicConfig(filename="logs/logs.log", level=logging.ERROR)
+logging.basicConfig(filename="logs/main_logs.log", level=logging.ERROR)
 logging.debug(f'Bot running at {datetime.utcnow()}')
 loop_interval = timedelta(minutes=5)
 last_search = datetime.utcnow() - loop_interval

@@ -8,6 +8,7 @@ import logging
 from datetime import datetime
 
 
+logging.basicConfig(filename="logs/post_logs.log", level=logging.ERROR)
 logging.debug(f'Posting accounts at {datetime.utcnow()}')
 mentions = ""
 try:
